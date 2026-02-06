@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  ais-ingestor:
+    build: .
+    container_name: ais-ingestor
+    env_file:
+      - .env
+    restart: unless-stopped
+    ports:
+      - "8000:8000"   # host:container
